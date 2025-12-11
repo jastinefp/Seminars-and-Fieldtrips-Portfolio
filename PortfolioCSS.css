@@ -1,0 +1,484 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+}
+        
+header
+{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+        
+header h1
+{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+        
+header p
+{
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+        
+nav
+{
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+        
+nav ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+        
+nav a
+{
+    text-decoration: none;
+    color: #667eea;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+        
+nav a:hover
+{
+    color: #764ba2;
+}
+        
+.container
+{
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+        
+.intro
+{
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    text-align: center;
+    background-image: 
+        linear-gradient(135deg, #667eea08 25%, transparent 25%),
+        linear-gradient(225deg, #667eea08 25%, transparent 25%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+        
+.intro h2
+{
+    color: #667eea;
+    margin-bottom: 20px;
+}
+        
+.filter-buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+        
+.filter-btn
+{
+    padding: 10px 25px;
+    border: 2px solid #667eea;
+    background: white;
+    color: #667eea;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+        
+.filter-btn:hover, .filter-btn.active
+{
+    background: #667eea;
+    color: white;
+}
+        
+.seminars-grid
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+        
+.seminar-card
+{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+        
+.seminar-card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+        
+.card-image
+{
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3em;
+}
+        
+.card-content
+{
+    padding: 25px;
+}
+        
+.card-date
+{
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+        
+.card-title
+{
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 15px;
+}
+        
+.card-category
+{
+    display: inline-block;
+    padding: 5px 15px;
+    background: #f0f0f0;
+    border-radius: 15px;
+    font-size: 0.85em;
+    color: #667eea;
+    margin-bottom: 15px;
+}
+        
+.card-description
+{
+    color: #666;
+    margin-bottom: 20px;
+}
+        
+.card-button
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+        
+.card-button:hover
+{
+    background: #764ba2;
+}
+        
+.modal
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    overflow-y: auto;
+}
+        
+.modal-content
+{
+    background: white;
+    max-width: 900px;
+    margin: 50px auto;
+    border-radius: 10px;
+    position: relative;
+}
+        
+.modal-header
+{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 10px 10px 0 0;
+}
+        
+.close-modal
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+        
+.modal-body
+{
+    padding: 40px;
+}
+        
+.modal-section
+{
+    margin-bottom: 30px;
+}
+        
+.modal-section h3
+{
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+        
+.certificate-display
+{
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+    border: 3px dashed #667eea;
+}
+        
+.certificate-icon
+{
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+        
+.learnings-list
+{
+    list-style: none;
+    padding-left: 0;
+}
+        
+.learnings-list li
+{
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+        
+.learnings-list li:before
+{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+        
+footer
+{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+        
+@media (max-width: 768px)
+{
+    header h1
+    {
+        font-size: 1.8em;
+    }
+            
+    .seminars-grid
+    {
+        grid-template-columns: 1fr;
+    }
+            
+    nav ul
+    {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.carousel-container
+{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f5f5f5;
+    border: 3px dashed #667eea;
+    padding: 20px;
+}
+
+.carousel-slides
+{
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-slide
+{
+    min-width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide img
+{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.carousel-btn
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(102, 126, 234, 0.8);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover
+{
+    background: rgba(102, 126, 234, 1);
+}
+
+.carousel-btn.prev
+{
+    left: 10px;
+}
+
+.carousel-btn.next
+{
+    right: 10px;
+}
+
+.carousel-dots
+{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot
+{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active
+{
+    background: #667eea;
+}
+
+@media (max-width: 768px)
+{
+    .carousel-slide
+    {
+        height: 250px;
+    }
+    
+    .carousel-btn
+    {
+        padding: 10px 15px;
+        font-size: 1.2em;
+    }
+}
+
+.stats-cards
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 30px 0 40px 0;
+}
+
+.stat-card
+{
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #667eea;
+}
+
+.stat-card:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.stat-number
+{
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 15px;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover .stat-number
+{
+    transform: scale(1.2);
+}
+
+.stat-label
+{
+    font-size: 1.1em;
+    color: #666;
+    font-weight: 500;
+}

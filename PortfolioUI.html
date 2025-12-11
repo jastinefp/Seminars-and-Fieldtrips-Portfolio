@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulite - Seminars and Fieldtrips E-Portfolio</title>
+    <link rel="icon" type="image/png" href="PortfolioImages/SSU.png">
+    <link rel="stylesheet" href="PortfolioCSS.css">
+</head>
+<body>
+    <header>
+        <h1>PAULITE, JASTINE F.  |  CEIT-03-702P</h1>
+        <p>Seminars and Fieldtrips Portfolio</p>
+    </header>
+    
+    <div class="container">
+        <div class="intro">
+            <h2>My Seminar Journey</h2>
+            <p>Welcome to my seminars and fieldtrips portfolio. Here you will find documentation of seminars, workshops, and training programs I have completed, along with key learnings and certifications earned.</p>
+            <hr style="border: none; border-top: 2px solid #e0e0e0; margin: 30px 0;">
+
+            <div class="stats-cards">
+                <div class="stat-card" onclick="scrollAndOpenSeminar(14)" style="cursor: pointer;">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Seminar Hosted</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">26</div>
+                    <div class="stat-label">Online Seminars/Workshops/<br>Trainings Attended</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Face-to-Face Seminars/<br>Workshops/Trainings Attended</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Seminars</button>
+            <button class="filter-btn" data-filter="eti">Emerging Technologies & Innovation</button>
+            <button class="filter-btn" data-filter="dpsd">Data, Programming, & Software Development</button>
+            <button class="filter-btn" data-filter="cnci">Cybersecurity, Networking & Cloud Infrastructure</button>
+        </div>
+        
+        <div class="seminars-grid" id="seminarsGrid">
+            <!-- Seminar Card 1 -->
+            <div class="seminar-card" data-category="dpsd" onclick="openModal(1)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster1.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">August 30, 2025</div>
+                    <h3 class="card-title">PowerBI: Exploring Data Without Coding</h3>
+                    <span class="card-category">Data, Programming, & Software Development</span>
+                    <p class="card-description">Learn ways to explore and understand data in PowerBI without writing code.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(1)">View Details</a>
+                </div>
+            </div>
+            
+            <!-- Seminar Card 2 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(2)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster2.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">August 30, 2025</div>
+                    <h3 class="card-title">Next-Gen Learning: Trends in IT, AI, and the Evolving Industry Landscape</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Gain insight into how new IT and AI trends are changing learning and modern industries.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(2)">View Details</a>
+                </div>
+            </div>
+            
+            <!-- Seminar Card 3 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(3)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster3.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 1, 2025</div>
+                    <h3 class="card-title">The Internet of Things (IoT): Connecting the Future</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Explore how everyday objects link to the internet to make life smarter and easier.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(3)">View Details</a>
+                </div>
+            </div>
+            
+            <!-- Seminar Card 4 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(4)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster4.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 2, 2025</div>
+                    <h3 class="card-title">The Power of Virtualization: How the Cloud Works Behind the Scenes</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Understand how virtualization helps cloud systems run apps and data smoothly.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(4)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 5 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(5)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster5.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 3, 2025</div>
+                    <h3 class="card-title">Network Device: Switches, Routers, Firewalls Wi-Fi Standards and Configuration</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Get an overview of key network devices and the Wi-Fi settings that keep networks secure and stable.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(5)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 0 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(0)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster0.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 4, 2025</div>
+                    <h3 class="card-title">Module 1 and Module 2</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Ideas of intellectual property, trademarks and branding, and simple ways to search for prior art and understand patents.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(0)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 6 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(6)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster6.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 6, 2025</div>
+                    <h3 class="card-title">AI-Powered Future: Mastering Prompt Engineering in Generative AI</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Develop skills in writing effective prompts that guide AI tools to produce better results.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(6)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 7 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(7)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster7.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 6, 2025</div>
+                    <h3 class="card-title">Hour of Code: Learn AI and Coding in a Fun and Engaging Way</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Experience simple and enjoyable activities that introduce AI and basic coding concepts.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(7)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 8 -->
+            <div class="seminar-card" data-category="dpsd" onclick="openModal(8)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster8.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 10, 2025</div>
+                    <h3 class="card-title">Software Programming 101: A Basic Guide for Aspiring Computer Programmers</h3>
+                    <span class="card-category">Data, Programming, & Software Development</span>
+                    <p class="card-description">Build a strong foundation in basic programming ideas for beginners.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(8)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 9 -->
+            <div class="seminar-card" data-category="dpsd" onclick="openModal(9)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster9.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 13, 2025</div>
+                    <h3 class="card-title">Python and MySQL in the Age of AI: Smarter Data, Smarter Systems</h3>
+                    <span class="card-category">Data, Programming, & Software Development</span>
+                    <p class="card-description">Understand how Python and MySQL work together to create smarter, AI-ready systems and data solutions.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(9)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 10 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(10)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster10.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 20, 2025</div>
+                    <h3 class="card-title">The Hacker's Journey: A Guide to Getting into Cybersecurity</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Follow the first steps that ethical hackers take when entering the cybersecurity field.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(10)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 11 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(11)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster11.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">September 26, 2025</div>
+                    <h3 class="card-title">Blockchain Unleashed: Powering a Decentralized Future</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Look into how blockchain supports secure and decentralized digital systems.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(11)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 12 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(12)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster12.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 6, 2025</div>
+                    <h3 class="card-title">Learn ChatGPT</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Understand how to use ChatGPT for daily tasks, learning, and productivity.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(12)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 13 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(13)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster13.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 7, 2025</div>
+                    <h3 class="card-title">Next-Gen Innovation: Exploring Arduino, Hardware, and Sensors</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Engage in learning with Arduino boards, sensors, and simple electronics.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(13)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 14 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(14)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster14.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 8, 2025</div>
+                    <h3 class="card-title">Emerging Nanotechnology in Computer Engineering</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Discover how tiny technologies are transforming computer parts and future devices.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(14)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 15 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(15)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster15.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 10, 2025</div>
+                    <h3 class="card-title">Ethical Hacking and Responsible Disclosure</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Learn how to report security issues in a safe and responsible manner.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(15)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 16 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(16)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster16.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 11, 2025</div>
+                    <h3 class="card-title">Cybersecurity and Data Privacy</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Explore ways to protect personal data and secure digital systems from threats.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(16)">View Details</a>
+                </div>
+            </div>
+            
+            <!-- Seminar Card 17 -->
+            <div class="seminar-card" data-category="dpsd" onclick="openModal(17)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster17.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 11, 2025</div>
+                    <h3 class="card-title">Human-Computer Interaction and User Experience Beyond the Screen</h3>
+                    <span class="card-category">Data, Programming, & Software Development</span>
+                    <p class="card-description">Examine how people interact with technology and how good design improves user experience.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(17)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 18 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(18)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster18.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 12, 2025</div>
+                    <h3 class="card-title">The Power of IoT: Driving Data-Informed Governance and Innovation</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">See how IoT data helps governments make better decisions and improve public services.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(18)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 19 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(19)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster19.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 13, 2025</div>
+                    <h3 class="card-title">Internet of Things (IoT) in Smart Cities</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Study how IoT supports cleaner, safer, and more efficient smart cities.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(19)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 20 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(20)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster20.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 18, 2025</div>
+                    <h3 class="card-title">Cloud Computing Fundamentals: Building Your IT Future in the Cloud</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Gain basic knowledge of cloud services and how they support modern IT careers.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(20)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 21 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(21)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster21.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 22, 2025</div>
+                    <h3 class="card-title">Stay Safe Online: Cyber Security Basics "Take Control of Your Online Security"</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Learn simple steps that keep people safe when using the internet.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(21)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 22 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(22)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster22.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">October 27, 2025</div>
+                    <h3 class="card-title">Exploring the Latest Technology in Embedded Systems</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Learn about the newest tools and techniques used inside small smart devices.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(22)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 23 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(23)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster23.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">November 9, 2025</div>
+                    <h3 class="card-title">Current Trends in IT Industry</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Review the latest developments shaping today’s fast-changing IT field.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(23)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 24 -->
+            <div class="seminar-card" data-category="dpsd" onclick="openModal(24)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster24.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">November 16, 2025</div>
+                    <h3 class="card-title">Data Mining & Data Analytics</h3>
+                    <span class="card-category">Data, Programming, & Software Development</span>
+                    <p class="card-description">Investigate how large sets of data are examined to find useful patterns and insights.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(24)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 25 -->
+            <div class="seminar-card" data-category="cnci" onclick="openModal(25)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster25.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">November 21, 2025</div>
+                    <h3 class="card-title">The Future of Storage and Computing</h3>
+                    <span class="card-category">Cybersecurity, Networking & Cloud Infrastructure</span>
+                    <p class="card-description">Discover new methods that make data storage faster and computing more powerful.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(25)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 26 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(26)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster26.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">November 29, 2025</div>
+                    <h3 class="card-title">Electronics Systems and Technologies 4.0</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Explore the electronics and automation tools that power today’s Industry 4.0.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(26)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 27 -->
+            <div class="seminar-card" data-category="dpsd" onclick="openModal(27)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster27.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">November 30, 2025</div>
+                    <h3 class="card-title">Advanced Programming & Web Technology</h3>
+                    <span class="card-category">Data, Programming, & Software Development</span>
+                    <p class="card-description">Explore key ideas in modern programming and web development to help learners build stronger and more dynamic applications.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(27)">View Details</a>
+                </div>
+            </div>
+
+            <!-- Seminar Card 28 -->
+            <div class="seminar-card" data-category="eti" onclick="openModal(28)">
+                <div class="card-image" style="background-image: url('PortfolioImages/Poster28.png'); background-size: cover; background-position: center;"></div>
+                <div class="card-content">
+                    <div class="card-date">December 6, 2025</div>
+                    <h3 class="card-title">Best Practices in IT Industries: How to Thrive as a Modern Engineer</h3>
+                    <span class="card-category">Emerging Technologies & Innovation</span>
+                    <p class="card-description">Pick up important habits and skills that help engineers succeed in the IT world.</p>
+                    <a href="#" class="card-button" onclick="event.stopPropagation(); openModal(28)">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Template -->
+    <div class="modal" id="seminarModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+                <h2 id="modalTitle">Seminar Title</h2>
+                <p id="modalDate">Date</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>About the Seminar</h3>
+                    <p id="modalDescription">Detailed description of the seminar goes here.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Key Learnings</h3>
+                    <ul class="learnings-list" id="modalLearnings">
+                        <li>Learning point 1</li>
+                        <li>Learning point 2</li>
+                        <li>Learning point 3</li>
+                    </ul>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Certificate of Completion</h3>
+                    <div class="certificate-display">
+                        <div class="certificate-icon">🏆</div>
+                        <p><strong>Certificate Earned</strong></p>
+                        <p>Click to view full certificate</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Personal Reflection</h3>
+                    <p id="modalReflection">Your personal takeaways and how you've applied what you learned.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Documentation</h3>
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev" onclick="changeSlide(-1, event)">&lt;</button>
+                        <div class="carousel-slides" id="carouselSlides"></div>
+                        <!-- Images will be inserted here by JavaScript -->
+                        <button class="carousel-btn next" onclick="changeSlide(1, event)">&gt;</button>
+                    </div>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Paulite, Jastine. All rights reserved.</p>
+        <p>Seminars and Fieldtrips Portfolio</p>
+    </footer>
+    
+    <script>
+        const seminars =
+        {
+            1:
+            {
+                title: "PowerBI: Exploring Data Without Coding",
+                date: "August 30, 2025",
+                description: "The seminar teaches participants how to explore and understand data using PowerBI. It shows easy ways to work with data without writing any code.",
+                learnings:
+                [
+                    "Learn how to load and view data in PowerBI.",
+                    "Understand basic tools for making charts and reports.",
+                    "Discover how to share and present data in a clear way."
+                ],
+                certificate: "PortfolioImages/Cert1.png",
+                reflection: "This seminar taught me that PowerBI makes data work easier even for beginners. I now feel more confident in reading and showing data. I believe these skills will help me in school and future work.",
+                documentation:
+                [  
+                    "PortfolioImages/S1-0.png",
+                    "PortfolioImages/S1-1.png",
+                    "PortfolioImages/S1-2.png",
+                    "PortfolioImages/S1-3.png",
+                    "PortfolioImages/S1-4.png",
+                    "PortfolioImages/S1-5.png",
+                    "PortfolioImages/S1-6.png",
+                    "PortfolioImages/S1-7.png"
+                ]
+            },
+            2:
+            {
+                title: "Next-Gen Learning: Trends in IT, AI, and the Evolving Industry Landscape",
+                date: "August 30, 2025",
+                description: "The seminar explains the latest trends in IT and artificial intelligence. It also shows how these changes are shaping learning and the future of work.",
+                learnings:
+                [
+                    "Learn about new technologies and how they are used in industries.",
+                    "Understand how AI is changing learning and business processes.",
+                    "Discover the skills needed to succeed in the modern IT world."
+                ],
+                certificate: "PortfolioImages/Cert2.png",
+                reflection: "I learned that technology and AI are changing how people learn and work. I feel excited to explore new skills for the future. I believe this knowledge will help me prepare for a career in IT.",
+                documentation:
+                [  
+                    "PortfolioImages/S1-0.png",
+                    "PortfolioImages/S2-1.png",
+                    "PortfolioImages/S2-2.png",
+                    "PortfolioImages/S2-3.png",
+                    "PortfolioImages/S2-4.png",
+                    "PortfolioImages/S2-5.png",
+                    "PortfolioImages/S2-6.png"
+                ]
+            },
+            3:
+            {
+                title: "The Internet of Things (IoT): Connecting the Future",
+                date: "September 1, 2025",
+                description: "The seminar explains how devices and objects connect to the internet to share information. It shows how IoT is changing daily life, businesses, and cities.",
+                learnings:
+                [
+                    "Learn how different devices communicate through the internet.",
+                    "Understand how IoT improves homes, cities, and businesses.",
+                    "Discover the benefits and challenges of using IoT technology."
+                ],
+                certificate: "PortfolioImages/Cert3.png",
+                reflection: "I learned that IoT helps make life easier and smarter. I feel more aware of how devices around me are connected. I believe knowing about IoT will help me understand future technology better.",
+                documentation:
+                [  
+                    "PortfolioImages/S3-0.png",
+                    "PortfolioImages/S3-1.png",
+                    "PortfolioImages/S3-2.png",
+                    "PortfolioImages/S3-3.png",
+                    "PortfolioImages/S3-4.png",
+                    "PortfolioImages/S3-5.png",
+                    "PortfolioImages/S3-6.png",
+                    "PortfolioImages/S3-7.png"
+                ]
+            },
+            4:
+            {
+                title: "The Power of Virtualization: How the Cloud Works Behind the Scenes",
+                date: "September 2, 2025",
+                description: "The seminar explains how virtualization works and how it supports cloud computing. It shows how cloud systems run apps and store data efficiently behind the scenes.",
+                learnings:
+                [
+                    "Learn the basic idea of virtualization and how it separates software from hardware.",
+                    "Understand how cloud services work and store data safely.",
+                    "Discover how businesses use virtualization to save time and resources."
+                ],
+                certificate: "PortfolioImages/Cert4.png",
+                reflection: "I learned that virtualization is important for cloud computing and modern IT. I now understand how apps and data are managed online. I believe these ideas will help me in learning more about technology and working in IT in the future.",
+                documentation:
+                [  
+                    "PortfolioImages/S4-1.png",
+                    "PortfolioImages/S4-2.png",
+                    "PortfolioImages/S4-3.png",
+                    "PortfolioImages/S4-4.png",
+                    "PortfolioImages/S4-5.png",
+                    "PortfolioImages/S4-6.png",
+                    "PortfolioImages/S4-7.png"
+                ]
+            },
+            5:
+            {
+                title: "Network Device: Switches, Routers, Firewalls Wi-Fi Standards and Configuration",
+                date: "September 3, 2025",
+                description: "The seminar explains the main devices used in a network, such as switches, routers, and firewalls. It also discusses Wi-Fi standards and how basic network settings are configured.",
+                learnings:
+                [
+                    "Learn the purpose and function of switches, routers, and firewalls.",
+                    "Understand common Wi-Fi standards and what makes them different.",
+                    "Discover basic steps in configuring network settings for better performance and security."
+                ],
+                certificate: "PortfolioImages/Cert5.png",
+                reflection: "I learned that each network device has an important role in keeping connections fast and safe. I now understand more about how Wi-Fi works and why settings matter. I believe this knowledge will help me solve simple network problems in the future.",
+                documentation:
+                [  
+                    "PortfolioImages/S5-0.png",
+                    "PortfolioImages/S5-1.png",
+                    "PortfolioImages/S5-2.png",
+                    "PortfolioImages/S5-3.png",
+                    "PortfolioImages/S5-4.png",
+                    "PortfolioImages/S5-5.png",
+                    "PortfolioImages/S5-6.png",
+                    "PortfolioImages/S5-9.png",
+                    "PortfolioImages/S5-7.png",
+                    "PortfolioImages/S5-8.png"
+                ]
+            },
+            0:
+            {
+                title: "Module 1 - Fundamentals of Intellectual Property Modular Course Series, Module 2 - Trademarks and Branding, Prior Art Search and Patent Basic Concepts",
+                date: "September 4, 2025",
+                description: "The seminar gives a clear introduction to how intellectual property works and why it is important. It also explains trademarks, branding, and the basic steps in finding and understanding patent information.",
+                learnings:
+                [
+                    "Understand the main types of intellectual property.",
+                    "Learn what trademarks are and how they support a brand.",
+                    "Know simple methods to search for prior art and read basic patent details."
+                ],
+                certificate: "PortfolioImages/Cert0.jfif",
+                reflection: "This seminar helped me see why protecting ideas is important. I learned that trademarks and patents have simple rules that I can understand and use. I now feel more confident when I read about intellectual property topics.",
+                documentation:
+                [  
+                    "PortfolioImages/S6-15.jfif",
+                    "PortfolioImages/S6-14.jfif",
+                    "PortfolioImages/S6-13.jfif",
+                    "PortfolioImages/S6-12.jfif",
+                    "PortfolioImages/S6-11.jfif",
+                    "PortfolioImages/S6-10.jfif",
+                    "PortfolioImages/S6-9.jfif",
+                    "PortfolioImages/S6-8.jfif",
+                    "PortfolioImages/S6-7.jfif",
+                    "PortfolioImages/S6-6.jfif",
+                    "PortfolioImages/S6-5.jfif",
+                    "PortfolioImages/S6-4.jfif",
+                    "PortfolioImages/S6-3.jfif",
+                    "PortfolioImages/S6-2.jfif",
+                    "PortfolioImages/S6-1.jfif",
+                    "PortfolioImages/S6-0.jfif"
+                ]
+            },
+            6:
+            {
+                title: "AI-Powered Future: Mastering Prompt Engineering in Generative AI",
+                date: "September 6, 2025",
+                description: "This seminar explains how AI tools like ChatGPT work and how we can talk to them using good prompts. It shows how prompt engineering helps AI give better and more useful answers.",
+                learnings:
+                [
+                    "How to write clear and effective prompts for AI tools.",
+                    "How generative AI creates text, images, and other content.",
+                    "How AI can help in school, work, and everyday tasks."
+                ],
+                certificate: "PortfolioImages/Cert6.png",
+                reflection: "This seminar helped me understand how important good prompts are when using AI. I learned simple ways to ask better questions and get better results. I now feel more confident using AI tools in my daily activities.",
+                documentation:
+                [  
+                    "PortfolioImages/S7-0.png",
+                    "PortfolioImages/S7-1.png",
+                    "PortfolioImages/S7-2.png",
+                    "PortfolioImages/S7-3.png",
+                    "PortfolioImages/S7-4.png",
+                    "PortfolioImages/S7-5.png",
+                    "PortfolioImages/S7-6.png",
+                    "PortfolioImages/S7-7.png",
+                    "PortfolioImages/S7-8.png",
+                    "PortfolioImages/S7-9.png",
+                    "PortfolioImages/S7-10.png",
+                    "PortfolioImages/S7-11.png",
+                    "PortfolioImages/S7-12.png",
+                    "PortfolioImages/S7-13.png",
+                    "PortfolioImages/S7-14.png",
+                    "PortfolioImages/S7-15.png",
+                    "PortfolioImages/S7-16.png"
+                ]
+            },
+            7:
+            {
+                title: "Hour of Code: Learn AI and Coding in a Fun and Engaging Way",
+                date: "September 6, 2025",
+                description: "This seminar introduces us to the basics of coding and simple AI concepts. It uses fun and easy activities to help everyone enjoy learning.",
+                learnings:
+                [
+                    "Basic ideas of coding and how computer programs work.",
+                    "How AI can follow instructions to solve simple tasks.",
+                    "How to use block-based coding tools to create small projects."
+                ],
+                certificate: "PortfolioImages/Cert7.png",
+                reflection: "This seminar made coding feel easy and enjoyable. I learned that anyone can start coding, even with no experience. It inspired me to keep learning more about AI and programming.",
+                documentation:
+                [
+                    "PortfolioImages/S8-0.png",
+                    "PortfolioImages/S8-1.png",
+                    "PortfolioImages/S8-2.png",
+                    "PortfolioImages/S8-3.png",
+                    "PortfolioImages/S8-4.png",
+                    "PortfolioImages/S8-5.png",
+                    "PortfolioImages/S8-6.png",
+                    "PortfolioImages/S8-7.png",
+                    "PortfolioImages/S8-8.png",
+                    "PortfolioImages/S8-9.png",
+                    "PortfolioImages/S8-10.png"
+                ]    
+            },
+            8:
+            {
+                title: "Software Programming: A Basic Guide for Aspiring Computer Programmers",
+                date: "September 10, 2025",
+                description: "This seminar teaches the basic ideas of software programming for beginners. It explains how computer programs work and how simple code is written.",
+                learnings:
+                [
+                    "Basic python programming concepts.",
+                    "How to write simple programs to solve easy tasks.",
+                    "How programmers think when creating application."
+                ],
+                certificate: "PortfolioImages/Cert8.png",
+                reflection: "This seminar helped me understand how programming really works. I learned that writing code is easier when you understand the basics. I now feel more motivated to practice and continue learning programming.",
+                documentation:
+                [
+                    "PortfolioImages/S9-0.png",
+                    "PortfolioImages/S9-1.jpg",
+                    "PortfolioImages/S9-2.jpg",
+                    "PortfolioImages/S9-3.jpg",
+                    "PortfolioImages/S9-4.jpg",
+                    "PortfolioImages/S9-9.jpg",
+                    "PortfolioImages/S9-5.jpg",
+                    "PortfolioImages/S9-6.jpg",
+                    "PortfolioImages/S9-7.jpg",
+                    "PortfolioImages/S9-8.jpg"
+                ]
+            },
+            9:
+            {
+                title: "Python and MySQL in the Age of AI: Smarter Data, Smarter Systems",
+                date: "September 13, 2025",
+                description: "This seminar explains how Python and MySQL work together to manage and analyze data. It also shows how these tools are used in the age of AI to build smarter and faster systems.",
+                learnings:
+                [
+                    "How Python can be used to read, process, and analyze data.",
+                    "How MySQL stores and organizes information in a database.",
+                    "How Python and MySQL can work together to create smarter applications."
+                ],
+                certificate: "PortfolioImages/Cert9.jpg",
+                reflection: "This seminar helped me understand how powerful Python and MySQL are when used together. I learned simple ways to work with data and how these skills support AI systems. I now feel more confident exploring data programming and database tools.",
+                documentation:
+                [
+                    "PortfolioImages/S10-0.jpg",
+                    "PortfolioImages/S10-1.png",
+                    "PortfolioImages/S10-2.png",
+                    "PortfolioImages/S10-3.png",
+                    "PortfolioImages/S10-4.png",
+                    "PortfolioImages/S10-5.png",
+                    "PortfolioImages/S10-6.png",
+                    "PortfolioImages/S10-7.png",
+                    "PortfolioImages/S10-8.png",
+                    "PortfolioImages/S10-9.png",
+                    "PortfolioImages/S10-10.png",
+                    "PortfolioImages/S10-11.png",
+                    "PortfolioImages/S10-12.png",
+                    "PortfolioImages/S10-13.png"
+                ]
+            },
+            10:
+            {
+                title: "The Hacker's Journey: A Guide to Getting into Cybersecurity",
+                date: "September 20, 2025",
+                description: "This seminar introduces the world of cybersecurity and explains how beginners can start learning it. It shows the steps, skills, and tools needed to become a cybersecurity professional.",
+                learnings:
+                [
+                    "Basic ideas of cybersecurity and why it is important.",
+                    "The common skills and tools used by ethical hackers.",
+                    "Safe and responsible ways to explore cybersecurity."
+                ],
+                certificate: "PortfolioImages/Cert10.jpg",
+                reflection: "This seminar helped me understand what cybersecurity is really about. I learned that hacking can be used for good when done in a safe and legal way. I now feel more interested in learning and practicing cybersecurity skills responsibly.",
+                documentation:
+                [
+                    "PortfolioImages/S11-0.png",
+                    "PortfolioImages/S11-1.png",
+                    "PortfolioImages/S11-2.png",
+                    "PortfolioImages/S11-3.png",
+                    "PortfolioImages/S11-4.png",
+                    "PortfolioImages/S11-5.png",
+                    "PortfolioImages/S11-7.png",
+                    "PortfolioImages/S11-8.png",
+                    "PortfolioImages/S11-9.png",
+                    "PortfolioImages/S11-10.png",
+                    "PortfolioImages/S11-11.png",
+                    "PortfolioImages/S11-12.png",
+                    "PortfolioImages/S11-13.png",
+                    "PortfolioImages/S11-14.png",
+                    "PortfolioImages/S11-15.png"
+                ]
+            },
+            11:
+            {
+                title: "Blockchain Unleashed: Powering a Decentralized Future",
+                date: "September 26, 2025",
+                description: "This seminar explains what blockchain is and how it works. It also shows how blockchain can help create a safer and more decentralized digital world.",
+                learnings:
+                [
+                    "The basic idea of blockchain and why it is secure.",
+                    "How decentralized systems work without a central authority.",
+                    "Real-world uses of blockchain in finance, business, and technology."
+                ],
+                certificate: "PortfolioImages/Cert11.png",
+                reflection: "This seminar made me understand blockchain in a simple way. I learned how it can change the way we store and share information. I now feel more interested in exploring new technologies that use blockchain.",
+                documentation:
+                [
+                    "PortfolioImages/S12-0.png",
+                    "PortfolioImages/S12-1.png",
+                    "PortfolioImages/S12-2.jpg",
+                    "PortfolioImages/S12-3.jpg",
+                    "PortfolioImages/S12-4.jpg",
+                    "PortfolioImages/S12-5.jpg",
+                    "PortfolioImages/S12-6.jpg",
+                    "PortfolioImages/S12-7.jpg",
+                    "PortfolioImages/S12-8.jpg",
+                    "PortfolioImages/S12-9.jpg",
+                    "PortfolioImages/S12-10.jpg",
+                    "PortfolioImages/S12-11.jpg",
+                    "PortfolioImages/S12-12.jpg"
+                ]
+            },
+            12:
+            {
+                title: "Learn ChatGPT",
+                date: "October 6, 2025",
+                description: "This seminar teaches how to use ChatGPT for learning, writing, and problem-solving. It explains how to ask questions clearly so the AI can give better answers.",
+                learnings:
+                [
+                    "How to use ChatGPT for school, work, and daily tasks.",
+                    "How to write clear prompts to get useful responses.",
+                    "What ChatGPT can and cannot do as an AI tool."
+                ],
+                certificate: "PortfolioImages/Cert12.png",
+                reflection: "This seminar helped me understand how to use ChatGPT in a smarter way. I learned how simple changes in my questions can improve the answers I get. I now feel more confident using AI tools to support my learning and work.",
+                documentation:
+                [
+                    "PortfolioImages/S13-0.png",
+                    "PortfolioImages/S13-1.jpg",
+                    "PortfolioImages/S13-2.jpg",
+                    "PortfolioImages/S13-3.jpg",
+                    "PortfolioImages/S13-4.jpg",
+                    "PortfolioImages/S13-5.jpg",
+                    "PortfolioImages/S13-6.jpg",
+                    "PortfolioImages/S13-7.jpg",
+                    "PortfolioImages/S13-8.jpg",
+                    "PortfolioImages/S13-9.jpg",
+                    "PortfolioImages/S13-10.jpg",
+                    "PortfolioImages/S13-11.jpg",
+                    "PortfolioImages/S13-12.jpg",
+                    "PortfolioImages/S13-13.jpg"
+                ]
+            },
+            13:
+            {
+                title: "Next-Gen Innovation: Exploring Arduino, Hardware, and Sensors",
+                date: "October 7, 2025",
+                description: "This seminar introduces Arduino and shows how hardware and sensors work together to create simple projects. It explains how these tools are used to build smart and interactive devices.",
+                learnings:
+                [
+                    "How Arduino works and how to use it in beginner projects.",
+                    "How sensors collect data from the environment.",
+                    "How hardware, sensors, and code connect to create smart systems."
+                ],
+                certificate: "PortfolioImages/Cert13.png",
+                reflection: "This seminar helped me understand how fun and creative hardware projects can be. I learned how Arduino and sensors work together to make smart ideas come to life. I now feel excited to try building my own simple electronic projects.",
+                documentation:
+                [
+                    "PortfolioImages/S14-0.jpg",
+                    "PortfolioImages/S14-1.jpg",
+                    "PortfolioImages/S14-2.jpg",
+                    "PortfolioImages/S14-3.jpg",
+                    "PortfolioImages/S14-4.jpg",
+                    "PortfolioImages/S14-5.jpg",
+                    "PortfolioImages/S14-6.jpg",
+                    "PortfolioImages/S14-7.jpg",
+                    "PortfolioImages/S14-8.jpg",
+                    "PortfolioImages/S14-9.jpg",
+                    "PortfolioImages/S14-10.jpg",
+                    "PortfolioImages/S14-11.jpg",
+                    "PortfolioImages/S14-12.jpg",
+                    "PortfolioImages/S14-13.jpg",
+                    "PortfolioImages/S14-14.jpg",
+                    "PortfolioImages/S14-15.jpg",
+                    "PortfolioImages/S14-16.jpg"
+                ]
+            },
+            14:
+            {
+                title: "Emerging Nanotechnology in Computer Engineering",
+                date: "October 8, 2025",
+                description: "The seminar introduces how very small technologies, called nanotechnology, are used in computer engineering. It shows how these tiny parts can make computers faster, smaller, and more powerful.",
+                learnings:
+                [
+                    "Learn what nanotechnology is and how small it can be.",
+                    "Understand how nanotech is used to improve computer parts and devices.",
+                    "Discover how future computers may change because of new nanotech tools."
+                ],
+                certificate: "PortfolioImages/Cert14.jfif",
+                reflection: "I learned that nanotechnology can greatly improve computers even though it is very small. I now see how tiny parts can make a big difference in speed and performance. I believe this topic will be important for future engineers and new technologies.",
+                documentation:
+                [
+                    "PortfolioImages/S15-0.jpg",
+                    "PortfolioImages/S15-1.png",
+                    "PortfolioImages/S15-2.png",
+                    "PortfolioImages/S15-3.png",
+                    "PortfolioImages/S15-4.png",
+                    "PortfolioImages/S15-5.png",
+                    "PortfolioImages/S15-7.png",
+                    "PortfolioImages/S15-8.png",
+                    "PortfolioImages/S15-9.png",
+                    "PortfolioImages/S15-10.png",
+                    "PortfolioImages/S15-11.png",
+                    "PortfolioImages/S15-12.png",
+                    "PortfolioImages/S15-13.png",
+                    "PortfolioImages/S15-14.png",
+                    "PortfolioImages/S15-15.png",
+                    "PortfolioImages/S15-16.png",
+                    "PortfolioImages/S15-17.png",
+                    "PortfolioImages/S15-18.png",
+                    "PortfolioImages/S15-19.png",
+                    "PortfolioImages/S15-20.png",
+                    "PortfolioImages/S15-21.png",
+                    "PortfolioImages/S15-22.png",
+                    "PortfolioImages/S15-24.png",
+                    "PortfolioImages/S15-25.png",
+                    "PortfolioImages/S15-26.jpg",
+                    "PortfolioImages/S15-27.jpg",
+                    "PortfolioImages/S15-28.jpg"
+                ]
+            },
+            15:
+            {
+                title: "Ethical Hacking and Responsible Disclosure",
+                date: "October 10, 2025",
+                description: "The seminar explains how ethical hackers find security problems in systems safely. It also teaches how to report these problems responsibly to help protect information.",
+                learnings:
+                [
+                    "Learn what ethical hacking is and how it helps protect systems.",
+                    "Understand the rules and methods for finding security weaknesses safely.",
+                    "Discover how to report problems responsibly without causing harm."
+                ],
+                certificate: "PortfolioImages/Cert15.png",
+                reflection: "I learned that hacking can be used for good if done ethically. I now understand the importance of reporting problems in a responsible way. I believe these skills will help me keep systems and data safe in the future.",
+                documentation:
+                [
+                    "PortfolioImages/S16-0.jpg",
+                    "PortfolioImages/S16-1.png",
+                    "PortfolioImages/S16-2.png",
+                    "PortfolioImages/S16-3.png",
+                    "PortfolioImages/S16-4.png",
+                    "PortfolioImages/S16-5.png",
+                    "PortfolioImages/S16-7.png",
+                    "PortfolioImages/S16-8.png",
+                    "PortfolioImages/S16-9.png",
+                    "PortfolioImages/S16-10.png",
+                    "PortfolioImages/S16-11.png",
+                    "PortfolioImages/S16-12.png",
+                    "PortfolioImages/S16-13.png",
+                    "PortfolioImages/S16-14.png",
+                    "PortfolioImages/S16-15.png"
+                ]
+            },
+            16:
+            {
+                title: "Cybersecurity and Data Privacy",
+                date: "October 11, 2025",
+                description: "The seminar explains how to protect information and digital systems from cyber threats. It also teaches the importance of keeping personal and business data private.",
+                learnings:
+                [
+                    "Learn about common cyber threats and how they affect users and organizations.",
+                    "Understand ways to keep data safe and secure online.",
+                    "Discover best practices for protecting personal and sensitive information."
+                ],
+                certificate: "PortfolioImages/Cert16.jfif",
+                reflection: "I learned that cybersecurity is very important for everyone who uses the internet. I now know ways to protect my personal data from hackers. I believe these skills will help me stay safe online and in future work.",
+                documentation:
+                [
+                    "PortfolioImages/S17-0.png",
+                    "PortfolioImages/S17-1.png",
+                    "PortfolioImages/S17-2.png",
+                    "PortfolioImages/S17-3.png",
+                    "PortfolioImages/S17-4.png",
+                    "PortfolioImages/S17-5.png",
+                    "PortfolioImages/S17-6.jpg",
+                    "PortfolioImages/S17-7.png",
+                    "PortfolioImages/S17-8.png",
+                    "PortfolioImages/S17-9.png",
+                    "PortfolioImages/S17-10.png",
+                    "PortfolioImages/S17-11.png",
+                    "PortfolioImages/S17-12.png"
+                ]
+            },
+            17:
+            {
+                title: "Human-Computer Interaction and User Experience Beyond the Screen",
+                date: "October 11, 2025",
+                description: "The seminar explains how people interact with computers and other digital devices. It also explores ways to make technology easier and more enjoyable to use.",
+                learnings:
+                [
+                    "Learn how design affects the way users interact with technology.",
+                    "Understand the principles of creating a good user experience.",
+                    "Discover methods to improve usability and make technology user-friendly."
+                ],
+                certificate: "PortfolioImages/Cert17.png",
+                reflection: "I learned that design and usability are very important for how people use technology. I now understand how good design can make devices easier and more fun to use. I believe this knowledge will help me create better tools and systems in the future.",
+                documentation:
+                [
+                    "PortfolioImages/S18-0.jpg",
+                    "PortfolioImages/S18-1.jpg",
+                    "PortfolioImages/S18-2.png",
+                    "PortfolioImages/S18-3.png",
+                    "PortfolioImages/S18-4.png",
+                    "PortfolioImages/S18-5.png",
+                    "PortfolioImages/S18-6.png",
+                    "PortfolioImages/S18-7.png",
+                    "PortfolioImages/S18-8.png",
+                    "PortfolioImages/S18-9.png",
+                    "PortfolioImages/S18-10.png",
+                    "PortfolioImages/S18-11.png",
+                    "PortfolioImages/S18-12.png",
+                    "PortfolioImages/S18-13.png",
+                    "PortfolioImages/S18-14.png",
+                    "PortfolioImages/S18-15.png"
+                ]
+            },
+            18:
+            {
+                title: "The Power of IoT: Driving Data-Informed Governance and Innovation",
+                date: "October 12, 2025",
+                description: "The seminar explains how the Internet of Things (IoT) collects data to help make better decisions. It also shows how IoT supports innovation in government and business services.",
+                learnings:
+                [
+                    "Learn how IoT devices collect and share useful data.",
+                    "Understand how data from IoT can improve decision-making and services.",
+                    "Discover ways IoT can help create new ideas and solutions."
+                ],
+                certificate: "PortfolioImages/Cert18.png",
+                reflection: "I learned that IoT can help leaders and businesses make smarter decisions. I now understand the value of data in improving services and creating new solutions. I believe this knowledge will be useful for working with technology and innovation in the future.",
+                documentation:
+                [
+                    "PortfolioImages/S19-0.jpg",
+                    "PortfolioImages/S19-1.png",
+                    "PortfolioImages/S19-2.png",
+                    "PortfolioImages/S19-3.png",
+                    "PortfolioImages/S19-4.png",
+                    "PortfolioImages/S19-5.png",
+                    "PortfolioImages/S19-6.png",
+                    "PortfolioImages/S19-7.png",
+                    "PortfolioImages/S19-8.png",
+                    "PortfolioImages/S19-9.png",
+                    "PortfolioImages/S19-10.png"
+                ]
+            },
+            19:
+            {
+                title: "Internet of Things (IoT) in Smart Cities",
+                date: "October 13, 2025",
+                description: "The seminar explains how the Internet of Things (IoT) is used to make cities smarter and more efficient. It shows how connected devices help improve safety, transport, energy, and services in urban areas.",
+                learnings:
+                [
+                    "Learn how IoT devices work together to support smart city systems.",
+                    "Understand how IoT can improve city services, safety, and energy use.",
+                    "Discover how data from IoT helps plan and manage cities better."
+                ],
+                certificate: "PortfolioImages/Cert19.png",
+                reflection: "I learned that IoT can make cities safer and more efficient for everyone. I now understand how technology and data work together in smart cities. I believe this knowledge will help me think about better solutions for urban problems in the future.",
+                documentation:
+                [
+                    "PortfolioImages/S20-0.jpg",
+                    "PortfolioImages/S20-1.png",
+                    "PortfolioImages/S20-2.png",
+                    "PortfolioImages/S20-3.png",
+                    "PortfolioImages/S20-4.png",
+                    "PortfolioImages/S20-5.png",
+                    "PortfolioImages/S20-6.png",
+                    "PortfolioImages/S20-7.png",
+                    "PortfolioImages/S20-8.png",
+                    "PortfolioImages/S20-9.png",
+                    "PortfolioImages/S20-10.png",
+                    "PortfolioImages/S20-11.png",
+                    "PortfolioImages/S20-12.png",
+                    "PortfolioImages/S20-13.png",
+                    "PortfolioImages/S20-14.png",
+                    "PortfolioImages/S20-15.png",
+                    "PortfolioImages/S20-16.png",
+                    "PortfolioImages/S20-17.png",
+                    "PortfolioImages/S20-18.png"
+                ]
+            },
+            20:
+            {
+                title: "Cloud Computing Fundamentals: Building Your IT Future in the Cloud",
+                date: "October 18, 2025",
+                description: "The seminar explains the basic ideas of cloud computing and how it works. It shows how cloud technology helps people and businesses store data and run applications online.",
+                learnings:
+                [
+                    "Learn what cloud computing is and how it is used in IT.",
+                    "Understand different types of cloud services and their benefits.",
+                    "Discover how cloud technology can support work, learning, and business growth."
+                ],
+                certificate: "PortfolioImages/Cert20.png",
+                reflection: "I learned that cloud computing is important for modern IT and everyday work. I now understand how data and applications can be stored and used online. I believe these skills will help me in my studies and future career in technology.",
+                documentation:
+                [
+                    "PortfolioImages/S21-0.jpg",
+                    "PortfolioImages/S21-1.png",
+                    "PortfolioImages/S21-2.png",
+                    "PortfolioImages/S21-3.png",
+                    "PortfolioImages/S21-4.png",
+                    "PortfolioImages/S21-5.png",
+                    "PortfolioImages/S21-6.png",
+                    "PortfolioImages/S21-7.png",
+                    "PortfolioImages/S21-8.png",
+                    "PortfolioImages/S21-9.png",
+                    "PortfolioImages/S21-10.png",
+                    "PortfolioImages/S21-11.png"
+                ]
+            },
+            21:
+            {
+                title: "Stay Safe Online: Cyber Security Basics \"Take Control of Your Online Security\"",
+                date: "October 22, 2025",
+                description: "The seminar teaches the basic steps to stay safe while using the internet. It explains common online threats and how to protect personal information.",
+                learnings:
+                [
+                    "Learn how to identify and avoid online threats like scams and viruses.",
+                    "Understand ways to protect passwords, accounts, and personal data.",
+                    "Discover safe habits for using social media, email, and websites."
+                ],
+                certificate: "PortfolioImages/Cert21.png",
+                reflection: "I learned that the internet can be unsafe if we are not careful. I now know how to protect my information and stay alert online. I believe these skills will help me use the internet safely every day.",
+                documentation:
+                [
+                    "PortfolioImages/S22-0.jpg",
+                    "PortfolioImages/S22-1.png",
+                    "PortfolioImages/S22-2.png",
+                    "PortfolioImages/S22-3.png",
+                    "PortfolioImages/S22-4.png",
+                    "PortfolioImages/S22-5.png",
+                    "PortfolioImages/S22-6.png",
+                    "PortfolioImages/S22-7.png",
+                    "PortfolioImages/S22-8.png",
+                    "PortfolioImages/S22-9.png",
+                    "PortfolioImages/S22-10.png",
+                    "PortfolioImages/S22-11.png",
+                    "PortfolioImages/S22-12.png"
+                ]
+            },
+            22:
+            {
+                title: "Exploring the Latest Technology in Embedded Systems",
+                date: "October 27, 2025",
+                description: "The seminar introduces the latest technology used in embedded systems. It shows how small computers are built into devices to make them smart and efficient.",
+                learnings:
+                [
+                    "Learn what embedded systems are and where they are used.",
+                    "Understand the new tools and technologies for building smart devices.",
+                    "Discover how embedded systems help improve performance and functionality in everyday devices."
+                ],
+                certificate: "",
+                reflection: "I learned that embedded systems are very important in modern technology. I now understand how small computers can control machines and devices. I believe this knowledge will help me design and work with smart technology in the future.",
+                documentation:
+                [
+                    "PortfolioImages/S23-0.jpg",
+                    "PortfolioImages/S23-1.png",
+                    "PortfolioImages/S23-2.png",
+                    "PortfolioImages/S23-3.png",
+                    "PortfolioImages/S23-4.png",
+                    "PortfolioImages/S23-5.png",
+                    "PortfolioImages/S23-6.png",
+                    "PortfolioImages/S23-7.png",
+                    "PortfolioImages/S23-8.png",
+                    "PortfolioImages/S23-9.png",
+                    "PortfolioImages/S23-10.png",
+                    "PortfolioImages/S23-11.png"
+                ]
+            },
+            23:
+            {
+                title: "Current Trends in IT Industry",
+                date: "November 9, 2025",
+                description: "The seminar explains the latest trends and changes in the IT industry. It shows how new technologies are shaping jobs, businesses, and daily life.",
+                learnings:
+                [
+                    "Learn about the newest technologies and tools in IT.",
+                    "Understand how IT trends affect careers and businesses.",
+                    "Discover the skills needed to succeed in the modern IT world."
+                ],
+                certificate: "",
+                reflection: "I learned that the IT industry is changing very fast with new technologies. I now know which skills are important to keep up with these changes. I believe this knowledge will help me prepare for a future career in IT.",
+                documentation:
+                [
+                    "PortfolioImages/S24-0.png",
+                    "PortfolioImages/S24-1.png",
+                    "PortfolioImages/S24-2.png",
+                    "PortfolioImages/S24-3.png",
+                    "PortfolioImages/S24-4.png",
+                    "PortfolioImages/S24-5.png",
+                    "PortfolioImages/S24-6.png",
+                    "PortfolioImages/S24-7.png"
+                ]
+            },
+            24:
+            {
+                title: "Data Mining & Data Analytics",
+                date: "November 16, 2025",
+                description: "The seminar explains how to find useful information from large amounts of data. It shows how data mining and analytics help people and businesses make better decisions.",
+                learnings:
+                [
+                    "Learn how to collect and organize data for analysis.",
+                    "Understand how to find patterns and trends in data.",
+                    "Discover how data can be used to improve decisions and strategies."
+                ],
+                certificate: "",
+                reflection: "I learned that data can tell important stories if we study it carefully. I now understand how analyzing data helps businesses and organizations. I believe these skills will help me work with data in school and in the future.",
+                documentation:
+                [
+                    "PortfolioImages/S25-0.png",
+                    "PortfolioImages/S25-1.jfif",
+                    "PortfolioImages/S25-2.jfif",
+                    "PortfolioImages/S25-3.jfif",
+                    "PortfolioImages/S25-4.jfif",
+                    "PortfolioImages/S25-5.jfif",
+                    "PortfolioImages/S25-6.jfif",
+                    "PortfolioImages/S25-7.jfif",
+                    "PortfolioImages/S25-8.jfif",
+                    "PortfolioImages/S25-9.jfif",
+                    "PortfolioImages/S25-10.jfif",
+                    "PortfolioImages/S25-11.jfif"
+                ]
+            },
+            25:
+            {
+                title: "The Future of Storage and Computing",
+                date: "November 21, 2025",
+                description: "The seminar explains how storage and computing technology is changing for the future. It shows new ways to store data and make computers faster and more powerful.",
+                learnings:
+                [
+                    "Learn about modern storage technologies and their advantages.",
+                    "Understand how computing power is increasing with new methods.",
+                    "Discover trends that will shape the future of computers and data management."
+                ],
+                certificate: "",
+                reflection: "I learned that storage and computing are improving very fast. I now understand how new technology makes computers more powerful and data easier to manage. I believe this knowledge will help me prepare for future work in technology.",
+                documentation:
+                [
+                    "PortfolioImages/S26-0.jpg",
+                    "PortfolioImages/S26-1.jfif",
+                    "PortfolioImages/S26-2.jfif",
+                    "PortfolioImages/S26-3.jfif",
+                    "PortfolioImages/S26-4.jfif",
+                    "PortfolioImages/S26-5.jfif",
+                    "PortfolioImages/S26-6.jfif",
+                    "PortfolioImages/S26-7.jfif",
+                    "PortfolioImages/S26-8.png",
+                    "PortfolioImages/S26-9.png",
+                    "PortfolioImages/S26-10.jfif"
+                ]
+            },
+            26:
+            {
+                title: "Electronics Systems and Technologies 4.0",
+                date: "November 29, 2025",
+                description: "The seminar explains modern electronics systems and technologies used in Industry 4.0. It shows how automation, smart devices, and digital tools improve industries and daily life.",
+                learnings:
+                [
+                    "Learn about electronics systems and smart technologies in Industry 4.0.",
+                    "Understand how automation and digital tools make work faster and easier.",
+                    "Discover how modern technology is changing industries and services."
+                ],
+                certificate: "PortfolioImages/Cert26.jpg",
+                reflection: "I learned that Industry 4.0 uses smart electronics to improve efficiency and performance. I now understand how automation and technology work together in modern systems. I believe this knowledge will help me use technology better in school and future jobs.",
+                documentation:
+                [
+                    "PortfolioImages/S27-0.png",
+                    "PortfolioImages/S27-1.png",
+                    "PortfolioImages/S27-2.png",
+                    "PortfolioImages/S27-3.png",
+                    "PortfolioImages/S27-4.png",
+                    "PortfolioImages/S27-5.png",
+                    "PortfolioImages/S27-6.png",
+                    "PortfolioImages/S27-7.png",
+                    "PortfolioImages/S27-8.png",
+                    "PortfolioImages/S27-9.png",
+                    "PortfolioImages/S27-10.png",
+                    "PortfolioImages/S27-11.png",
+                    "PortfolioImages/S27-12.png",
+                    "PortfolioImages/S27-13.png",
+                    "PortfolioImages/S27-14.png",
+                    "PortfolioImages/S27-15.png",
+                    "PortfolioImages/S27-16.png",
+                    "PortfolioImages/S27-17.png",
+                    "PortfolioImages/S27-18.png",
+                    "PortfolioImages/S27-19.png",
+                    "PortfolioImages/S27-20.png",
+                    "PortfolioImages/S27-21.png",
+                    "PortfolioImages/S27-22.png",
+                    "PortfolioImages/S27-23.png",
+                    "PortfolioImages/S27-24.png",
+                    "PortfolioImages/S27-25.png"
+                ]
+            },
+            27:
+            {
+                title: "Advanced Programming & Web Technology",
+                date: "November 30, 2025",
+                description: "The seminar explains advanced programming concepts and modern web technologies. It shows how these tools help create better websites and web applications.",
+                learnings:
+                [
+                    "Learn advanced programming techniques for web development.",
+                    "Understand how web technologies work together to build applications.",
+                    "Discover ways to improve website functionality and user experience."
+                ],
+                certificate: "",
+                reflection: "I learned that advanced programming helps make websites more powerful and useful. I now understand how different web technologies work together. I believe these skills will help me create better websites in the future.",
+                documentation:
+                [
+                    "PortfolioImages/S28-0.jpg",
+                    "PortfolioImages/S28-1.png",
+                    "PortfolioImages/S28-2.png",
+                    "PortfolioImages/S28-3.png",
+                    "PortfolioImages/S28-4.png",
+                    "PortfolioImages/S28-7.png",
+                    "PortfolioImages/S28-5.png",
+                    "PortfolioImages/S28-6.jfif"
+                ]
+            },
+            28:
+            {
+                title: "Best Practices in IT Industries: How to Thrive as a Modern Engineer",
+                date: "December 6, 2025",
+                description: "The seminar explains the best practices used in IT industries today. It shows how engineers can succeed and grow in modern technology careers.",
+                learnings:
+                [
+                    "Learn important habits and skills for IT professionals.",
+                    "Understand how to work effectively in teams and projects.",
+                    "Discover ways to stay updated with new technologies and trends."
+                ],
+                certificate: "",
+                reflection: "I learned that good practices and skills are important to succeed in IT. I now understand how teamwork and learning new tools help a modern engineer. I believe this knowledge will guide me to perform better in my future career.",
+                documentation:
+                [
+                    "PortfolioImages/S29-0.png",
+                    "PortfolioImages/S29-1.png",
+                    "PortfolioImages/S29-2.png",
+                    "PortfolioImages/S29-3.png",
+                    "PortfolioImages/S29-4.png",
+                    "PortfolioImages/S29-5.png",
+                    "PortfolioImages/S29-6.png",
+                    "PortfolioImages/S29-7.png",
+                    "PortfolioImages/S29-8.png",
+                    "PortfolioImages/S29-9.png"
+                ]
+            }
+        };
+
+        let currentSlide = 0;
+let currentSeminarImages = [];
+
+function showCarousel(images)
+{
+    currentSeminarImages = images;
+    currentSlide = 0;
+    
+    const slidesContainer = document.getElementById('carouselSlides');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    if (!images || images.length === 0)
+    {
+        slidesContainer.innerHTML = '<p style="padding: 40px; text-align: center; color: #666;">No documentation images available</p>';
+        dotsContainer.innerHTML = '';
+        return;
+    }
+    
+    slidesContainer.innerHTML = images.map(img => 
+        `<div class="carousel-slide"><img src="${img}" alt="Documentation"></div>`
+    ).join('');
+    
+    dotsContainer.innerHTML = images.map((_, i) => 
+        `<span class="dot ${i === 0 ? 'active' : ''}" onclick="goToSlide(${i}, event)"></span>`
+    ).join('');
+}
+
+function changeSlide(direction, event)
+{
+    event.stopPropagation();
+    currentSlide += direction;
+    
+    if (currentSlide < 0) currentSlide = currentSeminarImages.length - 1;
+    if (currentSlide >= currentSeminarImages.length) currentSlide = 0;
+    
+    updateCarousel();
+}
+
+function goToSlide(index, event)
+{
+    event.stopPropagation();
+    currentSlide = index;
+    updateCarousel();
+}
+
+function updateCarousel()
+{
+    const slidesContainer = document.getElementById('carouselSlides');
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    document.querySelectorAll('.dot').forEach((dot, i) =>
+    {
+        dot.classList.toggle('active', i === currentSlide);
+    });
+}
+        
+        function openModal(id)
+        {
+            const s = seminars[id];
+            document.getElementById('modalTitle').textContent = s.title;
+            document.getElementById('modalDate').textContent = s.date;
+            document.getElementById('modalDescription').textContent = s.description;
+            document.getElementById('modalReflection').textContent = s.reflection;
+            
+            const learningsList = document.getElementById('modalLearnings');
+            learningsList.innerHTML = s.learnings.map(l => `<li>${l}</li>`).join('');
+            
+            const certDisplay = document.querySelector('.certificate-display');
+            if (s.certificate)
+            {
+                certDisplay.innerHTML = `<img src="${s.certificate}" alt="Certificate" style="max-width: 100%; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">`;
+            }
+            else
+            {
+                certDisplay.innerHTML =
+                `<div class="certificate-icon">🏆</div>
+                <p><strong>Certificate Earned</strong></p>
+                <p>Certificate image coming soon</p>`;
+            }
+
+            showCarousel(s.documentation);
+
+            document.getElementById('seminarModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal()
+        {
+            document.getElementById('seminarModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        document.querySelectorAll('.filter-btn').forEach(btn =>
+        {
+            btn.addEventListener('click', function()
+            {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const cards = document.querySelectorAll('.seminar-card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter)
+                    {
+                        card.style.display = 'block';
+                    }
+                    else
+                    {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        window.onclick = function(e)
+        {
+            const modal = document.getElementById('seminarModal');
+            if (e.target === modal)
+            {
+                closeModal();
+            }
+        }
+
+        function scrollAndOpenSeminar(id)
+        {
+            const cards = document.querySelectorAll('.seminar-card');
+            const targetCard = cards[id - 1];
+            
+            if (targetCard)
+            {
+                targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout
+                (() => { openModal(id);}, 800);
+            }
+        }
+    </script>
+</body>
+</html>
